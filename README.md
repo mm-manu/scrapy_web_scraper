@@ -5,4 +5,5 @@ The spider extracts all products from the different product categories and write
 The CSV file is used in another project to build a classifier.<br>
 
 ### Usage
+``pip install scrapy``
 ``python start.py``
