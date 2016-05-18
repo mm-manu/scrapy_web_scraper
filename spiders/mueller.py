@@ -103,14 +103,6 @@ class MuellerProductSpider(scrapy.Spider):
             else:
                 print category+' '+str(len(response.xpath('//div[@class="pagination"]/ol')))
                 num_pages = len(response.xpath('//div[@class="pagination"]/ol'))
-            #print 'xxxxxx> '+category+'  '+str(response.xpath('//div[@class="pagination"]/ol').xpath('//a[@class="last"]/text()').extract()[0])
-            #num_pages = 0
-            #print 'xxxxxx> '+str(response.xpath('//div[@class="pagination"]/ol').xpath('/a[@class="last"]/text()').extract())
-            #if len(response.xpath('//div[@class="pagination"]/ol').xpath('//a[@class="last"]')):
-            #    num_pages = response.xpath('//div[@class="pagination"]/ol').xpath('/a[@class="last"]/text()').extract()
-            #else:
-            #    num_pages = len(response.xpath('//div[@class="pagination"]/ol'))
-            #print '>>>>>>>>>>>>> '+str(num_pages)
             
             self.logger.info(response.url+' >>> '+str(num_pages)+' pages')
             if num_pages > 1:
